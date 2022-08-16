@@ -6,6 +6,7 @@ from Services.getPage import *
 from Services.getPosition import *
 from Services.cleanPositionLine import *
 from Handlers.DocumentHandler import *
+from Services.massExtraction import *
 
 import operator
 from docx.shared import Inches
@@ -53,3 +54,14 @@ print(dictFinal)
 document.save('C:/Users/luiz.sa/Desktop/ExtrairNotasKindle/'+cleanTitle+'.docx')
 
 print("O programa foi um sucesso!")
+
+#for title, pageOrPosition in titlesToSearch.items():
+#  while linePosition < len(arrayLines):
+#    if title in arrayLines[linePosition]:
+#      if pageOrPosition == "1":
+#        position = getPosition(arrayLines, linePosition)
+#      else:
+#        position = getPage(arrayLines, linePosition)
+#      notes = ifIsNote(arrayLines[linePosition+1], arrayLines[linePosition+3])
+#      dictPositionNotes.update(ordernateNotesNHighlights(position, notes))          
+#    linePosition+=1
